@@ -24,6 +24,7 @@ table.setAttribute('id', 'table')
 
     for (var j = 0; j < 4; j++) {
       td = document.createElement('TD');
+		td.className = 'td';
       td.width = '75';
       td.appendChild(document.createTextNode(random_rgba()));
 td.style.backgroundColor= random_rgba()
@@ -35,8 +36,11 @@ console.log(random_rgba())
 }
 
 function button() {
-	console.log( document.getElementById('table'))
- document.getElementById('table').rows[3].cells[12].style.backgroundColor = random_rgba();
-
+	for (var i = 0; i < 3; i++) {
+		for (var j = 0; j < 4; j++) {
+ document.getElementById('table').rows[i].cells[j].style.backgroundColor = random_rgba()
+ document.getElementById('table').rows[i].cells[j].innerHTML = random_rgba()
+}
+}
 }
 
